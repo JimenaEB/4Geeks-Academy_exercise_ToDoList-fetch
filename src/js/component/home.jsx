@@ -41,6 +41,7 @@ const Home = () => {
 					if (!response.ok) {
 						throw new Error("Failed updating tasks");
 					}
+					setUpdate(false);
 				})
 				.catch(error => {
 					setFailOnUpdating(error.message);
